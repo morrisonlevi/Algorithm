@@ -1,0 +1,16 @@
+{
+    "name": "morrisonlevi/algorithm",
+    "description": "Composable algorithms in PHP",
+    "require": {
+        "php": ">=5.6"
+    },
+    "authors": [
+        {
+            "name": "Levi Morrison",
+            "email": "levim@php.net"
+        }
+    ],
+    "autoload": {
+        "files": ["load.php"]
+    }
+}
