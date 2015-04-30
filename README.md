@@ -26,7 +26,7 @@ $mul2 = function ($value) {
     return $value * 2;
 };
 
-$result = map($mul2, [1,2,3]);
+$result = map($mul2)([1,2,3]);
 
 var_export(iterator_to_array($result));
 /*
@@ -47,26 +47,17 @@ namespace morrisonlevi\Algorithm;
 
 require __DIR__ . '/load.php';
 
-// this function is just here to help with writing the fully qualified names
-// of the algorithms
-function fqn($base) {
-    return function($identifier) use ($base) {
-        return "$base\\$identifier";
-    };
-}
-$fqn = fqn(__NAMESPACE__);
-
 
 $algorithm = chain(
-    bind($fqn('filter'), function($value) {
+    filter(function($value) {
         return $value % 2 > 0;
     }),
-    bind($fqn('map'), function($value) {
+    map(function($value) {
         return $value * 2;
     }),
-    bind($fqn('reduce'), function($accumulator, $value) {
+    reduce(function($accumulator, $value) {
         return $accumulator + $value;
-    }, 0)
+    })(0)
 );
 
 var_dump($algorithm([1,2,3])); // int(8)
