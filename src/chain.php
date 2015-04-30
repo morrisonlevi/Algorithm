@@ -4,7 +4,13 @@ namespace morrisonlevi\Algorithm;
 
 
 function chain(callable $fn, callable ...$callables) {
-    $functions = array_reverse(func_get_args());
-    return compose(...$functions);
+    $functions = func_get_args();
+    return function(...$params) use($functions) {
+        $carry = $functions[0](...$params);
+        for ($i = 1; $i < count($functions); $i++) {
+            $carry = $functions[$i]($carry);
+        }
+        return $carry;
+    };
 }
 

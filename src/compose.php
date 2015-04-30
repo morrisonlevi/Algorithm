@@ -3,15 +3,14 @@
 namespace morrisonlevi\Algorithm;
 
 
-function compose(callable $f, callable ...$callables) {
+function compose(callable $fn, callable ...$callables) {
     $functions = func_get_args();
     return function(...$params) use($functions) {
-        $f = array_pop($functions);
-        $carry = $f(...$params);
-        while (!empty($functions)) {
-            $f = array_pop($functions);
-            $carry = $f($carry);
-        }   
+        $i = count($functions) - 1;
+        $carry = $functions[$i](...$params);
+        for ($i--; $i >= 0; $i--) {
+            $carry = $functions[$i]($carry);
+        }
         return $carry;
     };
 }
