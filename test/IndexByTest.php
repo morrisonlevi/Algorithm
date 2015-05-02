@@ -13,6 +13,8 @@ class IndexByTest extends \PHPUnit_Framework_TestCase {
             };
         };
 
+        $indexBy = indexBy($pluck('id'));
+
         $input = [
             ['name' => 'Levi', 'id' => 1],
             ['name' => 'Daniel', 'id' => 0],
@@ -21,7 +23,7 @@ class IndexByTest extends \PHPUnit_Framework_TestCase {
             1 => ['name' => 'Levi', 'id' => 1],
             0 => ['name' => 'Daniel', 'id' => 0],
         ];
-        $actual = iterator_to_array(indexBy($pluck('id'))($input));
+        $actual = iterator_to_array($indexBy($input));
 
         $this->assertEquals($expect, $actual);
     }
