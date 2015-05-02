@@ -9,6 +9,8 @@ require __DIR__ . '/src/map.php';
 require __DIR__ . '/src/product.php';
 require __DIR__ . '/src/reduce.php';
 require __DIR__ . '/src/skip.php';
+require __DIR__ . '/src/skipWhile.php';
 require __DIR__ . '/src/sum.php';
 require __DIR__ . '/src/take.php';
+require __DIR__ . '/src/takeWhile.php';
 
