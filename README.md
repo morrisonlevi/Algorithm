@@ -40,7 +40,7 @@ array (
 */
 ```
 
-This example chains a `filter`, `map` and `reduce` together:
+This example chains a `filter`, `map` and `sum` together:
 
 ```php
 <?php
@@ -49,17 +49,18 @@ namespace morrisonlevi\Algorithm;
 
 require __DIR__ . '/load.php';
 
+$odd = function($value) {
+   return $value % 2 > 0;
+};
+
+$mul2 = function($value) {
+    return $value * 2;
+};
 
 $algorithm = chain(
-    filter(function($value) {
-        return $value % 2 > 0;
-    }),
-    map(function($value) {
-        return $value * 2;
-    }),
-    reduce(function($accumulator, $value) {
-        return $accumulator + $value;
-    })(0)
+    filter($odd),
+    map($mul2),
+    sum()
 );
 
 var_dump($algorithm([1,2,3])); // int(8)
