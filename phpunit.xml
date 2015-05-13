@@ -1,24 +1,19 @@
 <phpunit bootstrap="load.php" colors="true">
-    <testsuites>
-        <testsuite name="Unit-Tests">
-            <directory>./test</directory>
-        </testsuite>
-    </testsuites>
-    <filter>
-        <whitelist addUncoveredFilesFromWhitelist="true">
-            <directory>src</directory>
-        </whitelist>
-    </filter>
 
-    <logging>
-        <log
-            type="coverage-html"
-            target="test/coverage"
-            charset="UTF-8"
-            yui="true"
-            lowUpperBound="69"
-            highLowerBound="90"
-            showUncoveredFiles="true"
-            />
-    </logging>
+  <testsuites>
+    <testsuite name="Unit-Tests">
+      <directory>./test</directory>
+    </testsuite>
+  </testsuites>
+
+  <filter>
+    <whitelist addUncoveredFilesFromWhitelist="true">
+      <directory>src</directory>
+    </whitelist>
+  </filter>
+
+  <logging>
+    <log type="coverage-clover" target="test/coverage/clover.xml"/>
+  </logging>
+
 </phpunit>

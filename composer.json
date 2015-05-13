@@ -3,7 +3,7 @@
     "description": "Composable algorithms in PHP",
     "minimum-stability": "dev",
     "require": {
-        "php": "~7.0"
+        "php": ">=5.6"
     },
     "authors": [
         {
@@ -13,5 +13,8 @@
     ],
     "autoload": {
         "files": ["load.php"]
+    },
+    "require-dev": {
+        "codeclimate/php-test-reporter": "0.1.*@dev"
     }
 }
