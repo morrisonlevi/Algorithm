@@ -1,6 +1,6 @@
 # Basic Algorithms for PHP
 
-[![Code Climate](https://codeclimate.com/github/morrisonlevi/Algorithm/badges/gpa.svg)](https://codeclimate.com/github/morrisonlevi/Algorithm)
+[![Code Climate](https://codeclimate.com/github/morrisonlevi/Algorithm/badges/gpa.svg)](https://codeclimate.com/github/morrisonlevi/Algorithm) [![Test Coverage](https://codeclimate.com/github/morrisonlevi/Algorithm/badges/coverage.svg)](https://codeclimate.com/github/morrisonlevi/Algorithm/coverage)
 
 PHP's built-in functions such as `array_map`, `array_filter` and `array_reduce` have a few issues:
 
