@@ -12,7 +12,8 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
             return $x % 2 > 0;
         };
         $expect = $input;
-        $actual = iterator_to_array(filter($filter_function)($input));
+        $filter = filter($filter_function);
+        $actual = iterator_to_array($filter($input));
         $this->assertEquals($expect, $actual);
     }
 
@@ -23,7 +24,8 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
             return $x % 2 > 0;
         };
         $expect = [];
-        $actual = iterator_to_array(filter($filter_function)($input));
+        $filter = filter($filter_function);
+        $actual = iterator_to_array($filter($input));
         $this->assertEquals($expect, $actual);
     }
 
@@ -34,7 +36,8 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
             return $x % 2 > 0;
         };
         $expect = $input;
-        $actual = iterator_to_array(filter($filter_function)($input));
+        $filter = filter($filter_function);
+        $actual = iterator_to_array($filter($input));
         $this->assertEquals($expect, $actual);
     }
 
@@ -45,7 +48,8 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
             return $x % 2 > 0;
         };
         $expect = [0 => 1, 2 => 3];
-        $actual = iterator_to_array(filter($filter_function)($input));
+        $filter = filter($filter_function);
+        $actual = iterator_to_array($filter($input));
         $this->assertEquals($expect, $actual);
     }
 

@@ -10,7 +10,8 @@ class TakeTest extends \PHPUnit_Framework_TestCase {
         $n = 0;
         $input = [1,2,3];
         $expect = [];
-        $actual = iterator_to_array(take($n)($input));
+        $take = take($n);
+        $actual = iterator_to_array($take($input));
 
         $this->assertEquals($expect, $actual);
     }
@@ -20,7 +21,8 @@ class TakeTest extends \PHPUnit_Framework_TestCase {
         $n = 1;
         $input = [1,2,3];
         $expect = [1];
-        $actual = iterator_to_array(take($n)($input));
+        $take = take($n);
+        $actual = iterator_to_array($take($input));
 
         $this->assertEquals($expect, $actual);
     }
@@ -30,7 +32,8 @@ class TakeTest extends \PHPUnit_Framework_TestCase {
         $n = 4;
         $input = [1,2,3];
         $expect = $input;
-        $actual = iterator_to_array(take($n)($input));
+        $take = take($n);
+        $actual = iterator_to_array($take($input));
 
         // sanity check
         $this->assertTrue(count($input) < $n);
@@ -40,4 +43,3 @@ class TakeTest extends \PHPUnit_Framework_TestCase {
 
 
 }
-

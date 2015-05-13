@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-function skip(int $n) {
+function skip($n) {
     return function($input) use($n) {
         $i = 0;
         foreach ($input as $key => $value) {
@@ -14,4 +14,3 @@ function skip(int $n) {
         }
     };
 }
-

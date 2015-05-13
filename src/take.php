@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-function take(int $n) {
+function take($n) {
     return function($input) use($n) {
         $i = 0;
         foreach ($input as $key => $value) {
@@ -15,4 +15,3 @@ function take(int $n) {
         }
     };
 }
-
