@@ -3,10 +3,10 @@
 namespace morrisonlevi\Algorithm;
 
 
-function min(callable $comparator = null) {
-    if ($comparator === null) {
-        $comparator = "min";
+function min(callable $minner = null) {
+    if ($minner === null) {
+        $minner = "min";
     }
-    return reduce($comparator);
+    return reduce($minner);
 }
 

@@ -3,10 +3,10 @@
 namespace morrisonlevi\Algorithm;
 
 
-function max(callable $comparator = null) {
-    if ($comparator === null) {
-        $comparator = "max";
+function max(callable $maxer = null) {
+    if ($maxer === null) {
+        $maxer = "max";
     }
-    return reduce($comparator);
+    return reduce($maxer);
 }
 
