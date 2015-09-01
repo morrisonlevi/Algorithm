@@ -7,6 +7,8 @@ require __DIR__ . '/src/compose.php';
 require __DIR__ . '/src/filter.php';
 require __DIR__ . '/src/indexBy.php';
 require __DIR__ . '/src/map.php';
+require __DIR__ . '/src/max.php';
+require __DIR__ . '/src/min.php';
 require __DIR__ . '/src/product.php';
 require __DIR__ . '/src/reduce.php';
 require __DIR__ . '/src/skip.php';
