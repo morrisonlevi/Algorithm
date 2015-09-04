@@ -9,10 +9,10 @@ class MaxTest extends \PHPUnit_Framework_TestCase {
     function test() {
         $input = range(0, 2);
 
-        $maxer = max();
-        $withInitial = $maxer(-1);
+        $maxer = max(-1);
+        $maxer = $maxer();
         $expect = 2;
-        $actual = $withInitial($input);
+        $actual = $maxer($input);
 
         $this->assertEquals($expect, $actual);
     }

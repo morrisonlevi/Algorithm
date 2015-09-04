@@ -17,8 +17,8 @@ class ReduceTest extends \PHPUnit_Framework_TestCase {
         $input = [];
         $initial = 0;
         $expect = $initial;
-        $combining_function = reduce($this->sum());
-        $reduce = $combining_function($initial);
+        $combining_function = reduce($initial);
+        $reduce = $combining_function($this->sum());
         $actual = $reduce($input);
         $this->assertEquals($expect, $actual);
     }
@@ -28,8 +28,8 @@ class ReduceTest extends \PHPUnit_Framework_TestCase {
         $input = [1, 2, 3];
         $initial = 0;
         $expect = 6;
-        $combining_function = reduce($this->sum());
-        $reduce = $combining_function($initial);
+        $combining_function = reduce($initial);
+        $reduce = $combining_function($this->sum());
         $actual = $reduce($input);
         $this->assertEquals($expect, $actual);
     }

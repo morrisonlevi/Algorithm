@@ -9,10 +9,10 @@ class MinTest extends \PHPUnit_Framework_TestCase {
     function test() {
         $input = range(0, 2);
 
-        $minner = min();
-        $withInitial = $minner(3);
+        $minner = min(3);
+        $minner = $minner();
         $expect = 0;
-        $actual = $withInitial($input);
+        $actual = $minner($input);
 
         $this->assertEquals($expect, $actual);
     }
