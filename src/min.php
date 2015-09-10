@@ -8,13 +8,8 @@ function min($initial) {
         if ($minner === NULL) {
             $minner = "min";
         }
-        return function($input) use($initial, $minner) {
-            $min = $initial;
-            foreach ($input as $value) {
-                $min = $minner($min, $value);
-            }
-            return $min;
-        };
+        $r = reduce($initial);
+        return $r($minner);
     };
 }
 

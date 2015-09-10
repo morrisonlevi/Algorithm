@@ -8,13 +8,8 @@ function max($initial) {
         if ($maxer === NULL) {
             $maxer = "max";
         }
-        return function($input) use($initial, $maxer) {
-            $max = $initial;
-            foreach ($input as $value) {
-                $max = $maxer($max, $value);
-            }
-            return $max;
-        };
+        $r = reduce($initial);
+        return $r($maxer);
     };
 }
 
