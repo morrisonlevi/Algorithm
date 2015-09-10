@@ -5,7 +5,7 @@ namespace morrisonlevi\Algorithm;
 
 function mapcat(callable $fn) {
     // This could be implemented in one line:
-    // return cat(map($fn));
+    // return concat(map($fn));
     // However, I opted to not do this since both map and cat have properties
     // that aren't needed for this specific application and I prefer to use
     // as few inter-dependencies as possible

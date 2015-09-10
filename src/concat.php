@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-function cat($input, ...$others) {
+function concat($input, ...$others) {
     foreach ($input as $key => $value) {
         yield $key => $value;
     }
