@@ -12,7 +12,14 @@ This repository provides definitions for common algorithms such as `map`, `filte
 
   - They work with any type that can be used in a foreach loop
   - They are lazy
-  - They are not (too) combersome to compose
+  - They are not (too) cumbersome to compose
+
+##Building
+
+PHP does not have function autoloading at the time of this writing. Since this project is mostly functions it uses a makefile to build a phar that is included instead. There are two options: 
+
+  - `make` (or `make phar`): builds `morrisonlevi_algorithm.phar`
+  - `make test`: runs the phpunit test suite
 
 ##Examples
 
