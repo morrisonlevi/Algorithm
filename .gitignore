@@ -2,3 +2,4 @@
 vendor/
 test/coverage/
 morrisonlevi_algorithm.phar
+load.php

@@ -16,9 +16,10 @@ This repository provides definitions for common algorithms such as `map`, `filte
 
 ##Building
 
-PHP does not have function autoloading at the time of this writing. Since this project is mostly functions it uses a makefile to build a phar that is included instead. There are two options: 
+PHP does not have function autoloading at the time of this writing. Since this project is mostly functions it uses a makefile to build a phar that is included instead. There are a few options: 
 
-  - `make` (or `make phar`): builds `morrisonlevi_algorithm.phar`
+  - `make` (or `make load.php`): builds `load.php`
+  - `make phar`: builds `morrisonlevi_algorithm.phar`
   - `make test`: runs the phpunit test suite
 
 ##Examples

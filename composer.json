@@ -12,12 +12,12 @@
     }
   ],
   "autoload": {
-    "files": ["morrisonlevi_algorithm.phar"]
+    "files": ["load.php"]
   },
   "require-dev": {
     "codeclimate/php-test-reporter": "0.1.*@dev"
   },
   "scripts": {
-    "pre-autoload-dump": "make"
+    "pre-autoload-dump": "make load.php"
   }
 }

@@ -1,4 +1,4 @@
-<phpunit bootstrap="morrisonlevi_algorithm.phar" colors="true">
+<phpunit bootstrap="load.php" colors="true">
 
   <testsuites>
     <testsuite name="Unit-Tests">
