@@ -6,22 +6,44 @@ namespace morrisonlevi\Algorithm;
 class SkipTest extends \PHPUnit_Framework_TestCase {
 
 
-    function test_skip_zero() {
-        $input = [0, 1, 2];
+    function test_skip_none() {
+        $skip = skip(function($value) {
+            return $value % 2 > 0;
+        });
+
+        $input = [0,2,3];
         $expect = $input;
-        $skip = skip(0);
         $actual = iterator_to_array($skip($input));
+
         $this->assertEquals($expect, $actual);
     }
 
 
     function test_skip_one() {
-        $input = [0, 1, 2];
-        $expect = [1 => 1, 2 => 2];
-        $skip = skip(1);
+        $skip = skip(function($value) {
+            return $value % 2 > 0;
+        });
+
+        $input = [1,2,3];
+        $expect = [1 => 2, 2 => 3];
         $actual = iterator_to_array($skip($input));
+
+        $this->assertEquals($expect, $actual);
+    }
+
+
+    function test_skip_all() {
+        $skip = skip(function($value) {
+            return $value % 2 > 0;
+        });
+
+        $input = [1,3,5];
+        $expect = [];
+        $actual = iterator_to_array($skip($input));
+
         $this->assertEquals($expect, $actual);
     }
 
 
 }
+

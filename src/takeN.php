@@ -3,15 +3,15 @@
 namespace morrisonlevi\Algorithm;
 
 
-function takeWhile(callable $fn) {
-    return function($input) use($fn) {
+function takeN($n) {
+    return function($input) use($n) {
+        $taken = 0;
         foreach ($input as $key => $value) {
-            if (!$fn($value)) {
-                break;
-            } else {
+            if ($taken++ < $n) {
                 yield $key => $value;
+            } else {
+                break;
             }
         }
     };
 }
-

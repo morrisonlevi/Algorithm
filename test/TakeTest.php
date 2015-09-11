@@ -6,40 +6,44 @@ namespace morrisonlevi\Algorithm;
 class TakeTest extends \PHPUnit_Framework_TestCase {
 
 
-    function test_take_zero() {
-        $n = 0;
-        $input = [1,2,3];
+    function test_takeWhile_none() {
+        $takeWhile = take(function($value) {
+            return $value % 2 > 0;
+        });
+
+        $input = [0,1,2];
         $expect = [];
-        $take = take($n);
-        $actual = iterator_to_array($take($input));
+        $actual = iterator_to_array($takeWhile($input));
 
         $this->assertEquals($expect, $actual);
     }
 
 
-    function test_take_1() {
-        $n = 1;
+    function test_takeWhile_once() {
+        $takeWhile = take(function($value) {
+            return $value % 2 > 0;
+        });
+
         $input = [1,2,3];
         $expect = [1];
-        $take = take($n);
-        $actual = iterator_to_array($take($input));
+        $actual = iterator_to_array($takeWhile($input));
 
         $this->assertEquals($expect, $actual);
     }
 
 
-    function test_take_more_than_input() {
-        $n = 4;
-        $input = [1,2,3];
-        $expect = $input;
-        $take = take($n);
-        $actual = iterator_to_array($take($input));
+    function test_takeWhile_all() {
+        $takeWhile = take(function($value) {
+            return $value % 2 > 0;
+        });
 
-        // sanity check
-        $this->assertTrue(count($input) < $n);
+        $input = [1,3,5];
+        $expect = $input;
+        $actual = iterator_to_array($takeWhile($input));
 
         $this->assertEquals($expect, $actual);
     }
 
 
 }
+
