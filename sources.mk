@@ -6,6 +6,7 @@ SOURCES= \
 	src/concat.php \
 	src/filter.php \
 	src/indexBy.php \
+	src/keys.php \
 	src/map.php \
 	src/mapcat.php \
 	src/max.php \
@@ -17,3 +18,4 @@ SOURCES= \
 	src/sum.php \
 	src/take.php \
 	src/takeN.php \
+	src/values.php \
