@@ -4,6 +4,7 @@ SOURCES= \
 	src/chunk.php \
 	src/compose.php \
 	src/concat.php \
+	src/flatten.php \
 	src/filter.php \
 	src/indexBy.php \
 	src/keys.php \
