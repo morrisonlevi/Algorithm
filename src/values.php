@@ -3,8 +3,9 @@
 namespace morrisonlevi\Algorithm;
 
 
-function values($input) {
+function values(iterable $input): \Iterator {
     foreach ($input as $value) {
         yield $value;
     }
 }
+

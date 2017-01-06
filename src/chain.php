@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-function chain(callable $fn, callable ...$callables) {
+function chain(callable $fn, callable ...$callables): callable {
     $functions = func_get_args();
     return function(...$params) use($functions) {
         $count = count($functions);

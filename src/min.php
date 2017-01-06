@@ -3,13 +3,10 @@
 namespace morrisonlevi\Algorithm;
 
 
-function min($initial) {
+function min($initial): callable {
     return function(callable $minner = null) use($initial) {
-        if ($minner === NULL) {
-            $minner = "min";
-        }
         $r = reduce($initial);
-        return $r($minner);
+        return $r($minner ?? 'min');
     };
 }
 

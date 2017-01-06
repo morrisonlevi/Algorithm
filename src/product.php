@@ -3,8 +3,8 @@
 namespace morrisonlevi\Algorithm;
 
 
-function product($initial = 1) {
-    return function($input) use($initial) {
+function product($initial = 1): callable {
+    return function(iterable $input) use($initial) {
         $product = $initial;
         foreach ($input as $value) {
             $product *= $value;

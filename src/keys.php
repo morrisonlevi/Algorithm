@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-function keys($input) {
+function keys(iterable $input): \Iterator {
     foreach ($input as $key => $unused) {
         yield $key;
     }

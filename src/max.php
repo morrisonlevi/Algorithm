@@ -3,13 +3,10 @@
 namespace morrisonlevi\Algorithm;
 
 
-function max($initial) {
+function max($initial): callable {
     return function(callable $maxer = null) use($initial) {
-        if ($maxer === NULL) {
-            $maxer = "max";
-        }
         $r = reduce($initial);
-        return $r($maxer);
+        return $r($maxer ?? 'max');
     };
 }
 

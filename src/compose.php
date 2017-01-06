@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-function compose(callable $fn, callable ...$callables) {
+function compose(callable $fn, callable ...$callables): callable {
     $functions = func_get_args();
     return function(...$params) use($functions) {
         $i = count($functions) - 1;

@@ -3,8 +3,8 @@
 namespace morrisonlevi\Algorithm;
 
 
-function take(callable $fn) {
-    return function($input) use($fn) {
+function take(callable $fn): callable {
+    return function(iterable $input) use($fn): \Iterator {
         foreach ($input as $key => $value) {
             if (!$fn($value)) {
                 break;

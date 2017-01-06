@@ -3,8 +3,8 @@
 namespace morrisonlevi\Algorithm;
 
 
-function takeN($n) {
-    return function($input) use($n) {
+function takeN(int $n): callable {
+    return function(iterable $input) use($n): \Iterator {
         $taken = 0;
         foreach ($input as $key => $value) {
             if ($taken++ < $n) {

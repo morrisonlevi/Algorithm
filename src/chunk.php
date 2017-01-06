@@ -3,9 +3,9 @@
 namespace morrisonlevi\Algorithm;
 
 
-function chunk($chunk_size) {
+function chunk(int $chunk_size): callable {
     assert($chunk_size >= 1);
-    return function($input) use($chunk_size) {
+    return function(iterable $input) use($chunk_size): \Iterator {
         $chunk = [];
         foreach ($input as $value) {
             if (count($chunk) < $chunk_size) {
