@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: levijm
- * Date: 4/29/15
- * Time: 12:27 PM
- */
 
 namespace morrisonlevi\Algorithm;
 
