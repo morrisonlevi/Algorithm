@@ -1,3 +1,3 @@
 PHP ?= php
-PHPUNIT ?= phpunit
+PHPUNIT ?= $(shell which phpunit)
 
