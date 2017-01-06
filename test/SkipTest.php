@@ -15,7 +15,7 @@ class SkipTest extends \PHPUnit_Framework_TestCase {
         $expect = $input;
         $actual = iterator_to_array($skip($input));
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
@@ -28,7 +28,7 @@ class SkipTest extends \PHPUnit_Framework_TestCase {
         $expect = [1 => 2, 2 => 3];
         $actual = iterator_to_array($skip($input));
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
@@ -41,7 +41,7 @@ class SkipTest extends \PHPUnit_Framework_TestCase {
         $expect = [];
         $actual = iterator_to_array($skip($input));
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

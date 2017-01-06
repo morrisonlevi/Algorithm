@@ -12,7 +12,7 @@ class ProductTest extends \PHPUnit_Framework_TestCase {
         $expect = 2*3*4;
         $actual = $product($input);
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
@@ -22,7 +22,7 @@ class ProductTest extends \PHPUnit_Framework_TestCase {
         $expect = 5*2*3*4;
         $actual = $product($input);
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

@@ -13,7 +13,7 @@ class FlattenTest extends \PHPUnit_Framework_TestCase {
 
         $expect = [1, 2, 3, 4];
         $actual = iterator_to_array($result, false);
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
     function test_variadic() {
@@ -21,7 +21,7 @@ class FlattenTest extends \PHPUnit_Framework_TestCase {
 
         $expect = [1, 2, 3, 4, 5, 6];
         $actual = iterator_to_array($result, false);
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 }

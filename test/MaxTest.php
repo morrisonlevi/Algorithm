@@ -14,7 +14,7 @@ class MaxTest extends \PHPUnit_Framework_TestCase {
         $expect = 2;
         $actual = $maxer($input);
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

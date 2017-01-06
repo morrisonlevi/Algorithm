@@ -16,7 +16,7 @@ class MapcatTest extends \PHPUnit_Framework_TestCase {
         $expect = [1,1,2,2];
         $actual = iterator_to_array($fn($input), false);
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
 
     }
 

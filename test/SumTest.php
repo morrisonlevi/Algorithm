@@ -11,7 +11,7 @@ class SumTest extends \PHPUnit_Framework_TestCase {
         $input = [2,3,4];
         $expect = 2+3+4;
         $actual = $sum($input);
-        $this->assertEquals($actual, $expect);
+        self::assertEquals($actual, $expect);
     }
 
 
@@ -20,7 +20,7 @@ class SumTest extends \PHPUnit_Framework_TestCase {
         $input = [1,2,3];
         $expect = 4+1+2+3;
         $actual = $sum($input);
-        $this->assertEquals($actual, $expect);
+        self::assertEquals($actual, $expect);
     }
 
 

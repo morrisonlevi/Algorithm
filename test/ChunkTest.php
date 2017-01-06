@@ -13,7 +13,7 @@ class ChunkTest extends \PHPUnit_Framework_TestCase {
         $expect = [$input];
         $actual = iterator_to_array($chunker($input));
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
@@ -24,7 +24,7 @@ class ChunkTest extends \PHPUnit_Framework_TestCase {
         $expect = [range(0, 4), range(5, 9)];
         $actual = iterator_to_array($chunker($input));
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
@@ -35,7 +35,7 @@ class ChunkTest extends \PHPUnit_Framework_TestCase {
         $expect = [[0,1,2], [3,4,5], [6,7,8], [9]];
         $actual = iterator_to_array($chunker($input));
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

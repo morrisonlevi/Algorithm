@@ -29,9 +29,9 @@ class ComposeTest extends \PHPUnit_Framework_TestCase {
         $x = 5;
 
         // sanity check
-        $this->assertTrue($f($x) === $x + 1);
+        self::assertTrue($f($x) === $x + 1);
 
-        $this->assertTrue($f($x) === $c($x));
+        self::assertTrue($f($x) === $c($x));
     }
 
 
@@ -43,9 +43,9 @@ class ComposeTest extends \PHPUnit_Framework_TestCase {
         $x = 3;
 
         // sanity check
-        $this->assertTrue($f($g($x)) === ($x * 2) + 1);
+        self::assertTrue($f($g($x)) === ($x * 2) + 1);
 
-        $this->assertTrue($f($g($x)) === $c($x));
+        self::assertTrue($f($g($x)) === $c($x));
     }
 
 

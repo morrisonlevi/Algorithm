@@ -20,7 +20,7 @@ class ReduceTest extends \PHPUnit_Framework_TestCase {
         $combining_function = reduce($initial);
         $reduce = $combining_function($this->sum());
         $actual = $reduce($input);
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
@@ -31,7 +31,7 @@ class ReduceTest extends \PHPUnit_Framework_TestCase {
         $combining_function = reduce($initial);
         $reduce = $combining_function($this->sum());
         $actual = $reduce($input);
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

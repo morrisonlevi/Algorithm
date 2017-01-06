@@ -25,7 +25,7 @@ class IndexByTest extends \PHPUnit_Framework_TestCase {
         ];
         $actual = iterator_to_array($indexBy($input));
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

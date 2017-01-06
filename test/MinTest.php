@@ -14,7 +14,7 @@ class MinTest extends \PHPUnit_Framework_TestCase {
         $expect = 0;
         $actual = $minner($input);
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

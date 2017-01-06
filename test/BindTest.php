@@ -13,7 +13,7 @@ class BindTest extends \PHPUnit_Framework_TestCase {
         $expect = strlen('asdf');
         $actual = $strlen();
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
 
     }
 
@@ -26,7 +26,7 @@ class BindTest extends \PHPUnit_Framework_TestCase {
         $strlen = $make_strlen();
         $actual = $strlen();
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 

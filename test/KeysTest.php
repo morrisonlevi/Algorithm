@@ -12,6 +12,6 @@ class KeysTest extends \PHPUnit_Framework_TestCase {
         $expect = [3,1,2];
         $actual = iterator_to_array(keys($input), false);
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 }

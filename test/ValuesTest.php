@@ -12,6 +12,6 @@ class ValuesTest extends \PHPUnit_Framework_TestCase {
         $expect = [1,3,2];
         $actual = iterator_to_array(values($input), false);
 
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 }

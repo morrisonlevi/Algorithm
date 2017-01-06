@@ -8,14 +8,14 @@ class MapTest extends \PHPUnit_Framework_TestCase {
 
     function test_empty() {
         $function = function() {
-            $this->assertTrue(false);
+            self::assertTrue(false);
         };
 
         $input = [];
         $expect = $input;
         $map = map($function);
         $actual = iterator_to_array($map($input));
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
@@ -28,7 +28,7 @@ class MapTest extends \PHPUnit_Framework_TestCase {
         $expect = [2, 4, 6];
         $map = map($function);
         $actual = iterator_to_array($map($input));
-        $this->assertEquals($expect, $actual);
+        self::assertEquals($expect, $actual);
     }
 
 
