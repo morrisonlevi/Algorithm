@@ -1,7 +1,10 @@
 include config.mk
-include sources.mk
 
-.PHONY: clean check phar
+.PHONY: clean check phar all
+
+all: load.php morrisonlevi_algorithm.phar
+
+SOURCES = $(wildcard src/*.php)
 
 load.php: $(SOURCES)
 	$(PHP) make-loader.php $^ > $@
@@ -9,7 +12,7 @@ load.php: $(SOURCES)
 phar: morrisonlevi_algorithm.phar
 
 morrisonlevi_algorithm.phar: load.php $(SOURCES)
-	$(PHP) -d phar.readonly=0 make-phar.php $@ $^
+	$(PHP) -d phar.readonly=0 make-phar.php $@ $?
 
 clean:
 	$(RM) morrisonlevi_algorithm.phar

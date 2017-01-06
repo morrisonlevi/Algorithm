@@ -20,7 +20,7 @@ PHP does not have function autoloading at the time of this writing. Since this p
 
   - `make` (or `make load.php`): builds `load.php`
   - `make phar`: builds `morrisonlevi_algorithm.phar`
-  - `make test`: runs the phpunit test suite
+  - `make check`: runs the phpunit test suite
 
 There is a script registered in the `composer.json` that will build `load.php` if the composer autoloader gets built.
 
