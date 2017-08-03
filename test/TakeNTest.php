@@ -10,7 +10,7 @@ class TakeNTest extends \PHPUnit\Framework\TestCase {
         $n = 0;
         $input = [1,2,3];
         $expect = [];
-        $take = takeN($n);
+        $take = take_n($n);
         $actual = iterator_to_array($take($input));
 
         $this->assertEquals($expect, $actual);
@@ -21,7 +21,7 @@ class TakeNTest extends \PHPUnit\Framework\TestCase {
         $n = 1;
         $input = [1,2,3];
         $expect = [1];
-        $take = takeN($n);
+        $take = take_n($n);
         $actual = iterator_to_array($take($input));
 
         $this->assertEquals($expect, $actual);
@@ -32,7 +32,7 @@ class TakeNTest extends \PHPUnit\Framework\TestCase {
         $n = 4;
         $input = [1,2,3];
         $expect = $input;
-        $take = takeN($n);
+        $take = take_n($n);
         $actual = iterator_to_array($take($input));
 
         // sanity check

@@ -3,15 +3,14 @@
 namespace morrisonlevi\Algorithm;
 
 
-function takeN($n) {
+function skip_n($n) {
     return function($input) use($n) {
-        $taken = 0;
+        $skipped = 0;
         foreach ($input as $key => $value) {
-            if ($taken++ < $n) {
-                yield $key => $value;
-            } else {
-                break;
+            if ($skipped++ < $n) {
+                continue;
             }
+            yield $key => $value;
         }
     };
 }
