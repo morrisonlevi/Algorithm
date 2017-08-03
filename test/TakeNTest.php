@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class TakeNTest extends \PHPUnit_Framework_TestCase {
+class TakeNTest extends \PHPUnit\Framework\TestCase {
 
 
     function test_take_zero() {

@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class ConcatTest extends \PHPUnit_Framework_TestCase {
+class ConcatTest extends \PHPUnit\Framework\TestCase {
 
 
     function test() {

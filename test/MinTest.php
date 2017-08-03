@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class MinTest extends \PHPUnit_Framework_TestCase {
+class MinTest extends \PHPUnit\Framework\TestCase {
 
 
     function test() {

@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class ChunkTest extends \PHPUnit_Framework_TestCase {
+class ChunkTest extends \PHPUnit\Framework\TestCase {
 
 
     function test_small_chunk() {

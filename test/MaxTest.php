@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class MaxTest extends \PHPUnit_Framework_TestCase {
+class MaxTest extends \PHPUnit\Framework\TestCase {
 
 
     function test() {

@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class ProductTest extends \PHPUnit_Framework_TestCase {
+class ProductTest extends \PHPUnit\Framework\TestCase {
 
 
     function test_product_default() {

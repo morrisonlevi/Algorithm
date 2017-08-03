@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class SumTest extends \PHPUnit_Framework_TestCase {
+class SumTest extends \PHPUnit\Framework\TestCase {
 
 
     function test_sum_default() {

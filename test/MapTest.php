@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class MapTest extends \PHPUnit_Framework_TestCase {
+class MapTest extends \PHPUnit\Framework\TestCase {
 
 
     function test_empty() {

@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class FlattenTest extends \PHPUnit_Framework_TestCase {
+class FlattenTest extends \PHPUnit\Framework\TestCase {
 
     function test() {
         $result = flatten([

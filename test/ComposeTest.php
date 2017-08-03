@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class ComposeTest extends \PHPUnit_Framework_TestCase {
+class ComposeTest extends \PHPUnit\Framework\TestCase {
 
     function f() {
         static $f = null;

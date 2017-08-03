@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class IndexByTest extends \PHPUnit_Framework_TestCase {
+class IndexByTest extends \PHPUnit\Framework\TestCase {
 
 
     function test_indexBy() {

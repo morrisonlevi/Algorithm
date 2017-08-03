@@ -1,6 +1,8 @@
 language: php
+
+sudo: false
+
 php:
-  - 5.6
   - 7.0
   - 7.1
   - nightly
@@ -8,12 +10,11 @@ php:
 install:
   - composer install
 
-addons:
-  code_climate:
-    repo_token: 4c0e9b6884bed9b8f2100cac23525603a9064cebcf0ec7444ef510622db18b66
+script:
+  - vendor/bin/phpunit
 
 after_success:
   - |
-      if [ $TRAVIS_PHP_VERSION == "5.6" ] ; then
+      if [ $TRAVIS_PHP_VERSION == "7.0" ] ; then
         ./vendor/bin/test-reporter --coverage-report=test/coverage/clover.xml
       fi

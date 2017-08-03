@@ -2,7 +2,7 @@
 
 namespace morrisonlevi\Algorithm;
 
-class KeysTest extends \PHPUnit_Framework_TestCase {
+class KeysTest extends \PHPUnit\Framework\TestCase {
     function test() {
         $input = [
             3 => 1,

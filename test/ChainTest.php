@@ -9,7 +9,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class ChainTest extends \PHPUnit_Framework_TestCase {
+class ChainTest extends \PHPUnit\Framework\TestCase {
 
 
     function f() {

@@ -3,7 +3,7 @@
 namespace morrisonlevi\Algorithm;
 
 
-class SkipNTest extends \PHPUnit_Framework_TestCase {
+class SkipNTest extends \PHPUnit\Framework\TestCase {
 
 
     function test_skip_zero() {

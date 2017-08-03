@@ -2,7 +2,7 @@
 
 namespace morrisonlevi\Algorithm;
 
-class ValuesTest extends \PHPUnit_Framework_TestCase {
+class ValuesTest extends \PHPUnit\Framework\TestCase {
     function test() {
         $input = [
             3 => 1,
