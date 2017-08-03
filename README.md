@@ -14,7 +14,7 @@ This repository provides definitions for common algorithms such as `map`, `filte
   - They are lazy
   - They are not (too) cumbersome to compose
 
-##Building
+## Building
 
 PHP does not have function autoloading at the time of this writing. Since this project is mostly functions it uses a makefile to build `load.php` which will include all of the functions for use. You can also build a phar or run the unit tests:
 
@@ -24,7 +24,7 @@ PHP does not have function autoloading at the time of this writing. Since this p
 
 There is a script registered in the `composer.json` that will build `load.php` if the composer autoloader gets built.
 
-##Examples
+## Examples
 
 This example does a basic `map`. Note that the function that does the mapping comes first and the input data comes second:
 ```php
